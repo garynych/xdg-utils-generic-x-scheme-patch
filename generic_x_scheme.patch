@@ -1,14 +1,14 @@
-From dcb04e3fc69c2a7bbd157d634460759c44791a99 Mon Sep 17 00:00:00 2001
+From 9b006393e35abc37dcb010af6799c5d1f04ee93b Mon Sep 17 00:00:00 2001
 From: Sergey Marochkin <me@ziggi.org>
-Date: Sat, 7 Nov 2015 15:02:36 +0300
-Subject: [PATCH] Fix generic x-scheme open
+Date: Sat, 7 Nov 2015 15:43:48 +0300
+Subject: [PATCH] Fix generic x scheme
 
 ---
  scripts/xdg-open.in | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)
 
 diff --git a/scripts/xdg-open.in b/scripts/xdg-open.in
-index 92a5912..4891974 100644
+index 0fbd63d..ef34701 100644
 --- a/scripts/xdg-open.in
 +++ b/scripts/xdg-open.in
 @@ -368,14 +368,14 @@ open_generic()
@@ -19,7 +19,7 @@ index 92a5912..4891974 100644
 -        open_envvar "$1"
 -    fi
 -
-     if has_display; then
+     if [ -n "$DISPLAY" ]; then
          open_generic_xdg_x_scheme_handler "$1"
      fi
  
